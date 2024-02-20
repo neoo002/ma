@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        .gif_container iframe {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Halloo moederr :D !!</h1>
+            <h1 class="header_text">Wie is je lievelingskind??</h1>
+        </div>
+        <div class="gif_container">
+            <iframe src="https://giphy.com/embed/weQG1zCbffpew" width="370" height="480" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+        </div>
+        <div class="buttons">
+            <button class="btn" id="nejraButton" onclick="nextPage()">Nejra</button>
+            <button class="btn" id="kenanButton" onmouseover="moveButton()" onclick="moveButton()">Kenan</button>
+            <script>
+                function nextPage() {
+                    window.location.href = "yes.html";
+                }
+
+                function moveButton() {
+                    var x = Math.random() * (window.innerWidth - document.getElementById('kenanButton').offsetWidth) - 85;
+                    var y = Math.random() * (window.innerHeight - document.getElementById('kenanButton').offsetHeight) - 48;
+                    document.getElementById('kenanButton').style.left = `${x}px`;
+                    document.getElementById('kenanButton').style.top = `${y}px`;
+                }
+            </script> 
+        </div>
+    </div>
+</body> 
+</html>
